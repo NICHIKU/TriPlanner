@@ -7,4 +7,4 @@
 
 import Foundation
 
-let DestinationTest: Destination = Destination(localisationCountry: "France", localisationCity: "Lille", price: <#T##Double#>, adresse: <#T##String#>, postalCode: <#T##Int#>, rating: <#T##Double#>)
+let DestinationTest: Destination = Destination(localisationCountry: "France", localisationCity: "Lille", price: 30, adresse: "9 rue d'Amiens", rating: 4.9)

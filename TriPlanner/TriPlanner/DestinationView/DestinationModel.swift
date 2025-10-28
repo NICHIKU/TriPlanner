@@ -13,6 +13,5 @@ struct Destination : Identifiable {
     var localisationCity: String
     var price: Double
     var adresse: String
-    var postalCode: Int
     var rating: Double
 }
