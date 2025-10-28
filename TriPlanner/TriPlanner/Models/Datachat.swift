@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Datachat : Identifiable {
+    var id : UUID = UUID()
+    var nbUser  : Int
+    var buddy   : User
+    var message : String
+    var exchange: [String]
+}
