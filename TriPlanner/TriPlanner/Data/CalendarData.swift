@@ -7,4 +7,4 @@
 
 import Foundation
 
-let calendarTest: Calendar = Calendar(day: 28, month: 10, year: 2025, hour: 16, minute: 23)
+let calendarTest: Calendar = Calendar(day: Date.now, hour: 16, minute: 23)

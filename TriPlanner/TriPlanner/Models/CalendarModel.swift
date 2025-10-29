@@ -9,9 +9,10 @@ import Foundation
 
 struct Calendar : Identifiable {
     var id: UUID = UUID()
-    var day: Int
-    var month: Int
-    var year: Int
+    var day : Date
     var hour: Int
     var minute: Int
+    var composants = DateComponents()
 }
+
+
