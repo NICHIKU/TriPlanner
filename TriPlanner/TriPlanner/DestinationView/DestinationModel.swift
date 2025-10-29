@@ -11,6 +11,7 @@ struct Destination : Identifiable {
     var id: UUID = UUID()
     var localisationCountry: String
     var localisationCity: String
+    var imageBonsPlans: String
     var price: Double
     var adresse: String
     var rating: Double
