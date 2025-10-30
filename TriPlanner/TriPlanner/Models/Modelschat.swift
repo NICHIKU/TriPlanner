@@ -14,3 +14,8 @@ struct Datachat : Identifiable {
     var message : String
     var exchange: [String]
 }
+ var chats = [
+    Datachat(nbUser: (5), buddy: usertest, message: "bonjour", exchange:["comment ça va "]),
+    Datachat(nbUser: 7, buddy: usertest, message: "salut", exchange: ["on voyage "]),
+    Datachat(nbUser: 8, buddy: usertest, message: "hey", exchange: ["dans quel pays veux-tu aller "])
+ ]
