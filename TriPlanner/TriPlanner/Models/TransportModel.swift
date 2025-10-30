@@ -4,7 +4,7 @@
 //
 //  Created by apprenant80 on 29/10/2025.
 //
-
+import SwiftUI
 import Foundation
 
 enum TypeTransport {
@@ -18,7 +18,7 @@ enum TypeTransport {
 
 struct Transport : Identifiable {
     var id: UUID = UUID()
-    var icon: String?
+    var icon: Image
     var typeTransport: TypeTransport
 }
 
