@@ -45,7 +45,7 @@ struct ActivityExtract: View {
                                         .onTapGesture {
                                             selectedRating = index
                                         }
-                                }
+                                 }
                             }
                             
                             // Bouton pour valider la note
@@ -71,6 +71,7 @@ struct ActivityExtract: View {
             .frame(width: 350, height: 300)
             .background()
             .cornerRadius(20)
+   
         }
     }
 }

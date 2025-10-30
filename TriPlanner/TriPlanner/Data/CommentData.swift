@@ -9,3 +9,4 @@ import Foundation
 
 var commentTest: Comment = Comment(userComment: usertest, contentComment: "Hello", dateComment: Date.now)
 
+var commentSection : [Comment] = []
