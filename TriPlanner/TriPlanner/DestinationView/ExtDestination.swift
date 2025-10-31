@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct ExtDestination: View {
+  
     var body: some View {
-        VStack{
-                
-            }
-           
-        }
     }
-
+}
 
 #Preview {
     ExtDestination()
