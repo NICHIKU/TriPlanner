@@ -10,8 +10,7 @@ import SwiftUI
 struct DestinationScreen: View {
     @State private var searchText = ""
     @State private var selection = "Bons plans"
-    
-    let Cities = ["Lille", "Paris", "Atlanta", "Tokyo", "Berlin", "Londres", "New York", "Stockholm", "Madrid", "Barcelone", "Rome", "Rio de Janeiro", "Mexico", "Buenos Aires", "Ottawa", "Marseille", "Pekin", "Manchester", "Pattaya", "Nice", "Rouen", "Toulouse", "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch"]
+    let Cities = ["Lille", "Paris", "Atlanta", "Tokyo", "Berlin", "Londres", "New York", "Stockholm", "Madrid", "Barcelone", "Rome", "Rio de Janeiro", "Mexico", "Buenos Aires", "Ottawa", "Marseille", "Pekin", "Manchester", "Pattaya", "Nice", "Rouen", "Toulouse", "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch", "Kyoto", "Moscow", "Salerno"]
     let selections = ["Bons plans", "pour un budget + élevé"]
     
     // Propriété calculée pour filtrer les résultats
@@ -25,8 +24,29 @@ struct DestinationScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                // Picker entre la barre de recherche et le contenu
+            //                    Text("\(titreImage)")
+            //                        .font(.caption2)
+            //                    Image("MercoBenz")
+            //                        .resizable()
+            //                        .cornerRadius(24)
+            //                        .aspectRatio(contentMode: .fit)
+            //                        .frame(width: 125)
+            HStack{
+                Spacer()
+                ExtDestination(image: Image("Tokyo"), titreImage: "Stade Mercedes-Benz, Atlanta")
+                Spacer()
+                ExtDestination(image: Image("Manchester"), titreImage: "London Liverpool ST, Londres")
+                Spacer()
+                ExtDestination(image: Image("TourEiffel"), titreImage: "Tour eiffel, Paris")
+                Spacer()
+                ExtDestination(image: Image("Italia"), titreImage: "Salerno, Italia")
+                Spacer()
+            }
+            HStack{
+                
+                
+            }
+            VStack {
                 Picker("Bons plans et budget + élevé", selection: $selection) {
                     ForEach(selections, id: \.self) { selection in
                         Text(selection)
@@ -44,10 +64,8 @@ struct DestinationScreen: View {
                             Text("Recherchez votre destination")
                                 .font(.title2)
                                 .foregroundColor(.gray)
-                            Image(systemName: "magnifyingglass")
                                 .font(.system(size: 50))
                                 .foregroundColor(.gray.opacity(0.5))
-                                .padding()
                             Spacer()
                         }
                     } else {
@@ -64,8 +82,8 @@ struct DestinationScreen: View {
         }
     }
 }
-
-
-#Preview {
-    DestinationScreen()
-}
+    
+    
+    #Preview {
+        DestinationScreen()
+    }
