@@ -67,6 +67,8 @@ struct DestinationScreen: View {
                         ExtDestination2(image: Image("MadridView"), titreImage: "Calle Gran Vía, Madrid, Spain")
                         Spacer()
                         ExtDestination2(image: Image("TokyoView"), titreImage: "Tokyo")
+                        Spacer()
+                        ExtDestination2(image: Image("BarceloneView"), titreImage: "Barcelone")
                     }
                 }
                 .navigationTitle("Destination")
