@@ -10,33 +10,9 @@
 		DF3055802EB0D58E0050F312 /* TriPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BB240ECE2EB11922000DDC9A /* Exceptions for "TriPlanner" folder in "TriPlanner" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				.gitignore,
-			);
-			target = DF30557F2EB0D58E0050F312 /* TriPlanner */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		BB240ECF2EB11922000DDC9A /* Exceptions for "TriPlanner" folder in "Compile Sources" phase from "TriPlanner" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = DF30557C2EB0D58E0050F312 /* Sources */;
-			membershipExceptions = (
-				.gitignore,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DF3055822EB0D58E0050F312 /* TriPlanner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				BB240ECE2EB11922000DDC9A /* Exceptions for "TriPlanner" folder in "TriPlanner" target */,
-				BB240ECF2EB11922000DDC9A /* Exceptions for "TriPlanner" folder in "Compile Sources" phase from "TriPlanner" target */,
-			);
 			path = TriPlanner;
 			sourceTree = "<group>";
 		};
