@@ -61,14 +61,14 @@ struct DestinationScreen: View {
                         }
                     }
                     ScrollView(){
-                        ExtDestination2(image: Image("MexicoPyramid"), titreImage: "Chichén Itzá, Mérida, Mexico")
-                        ExtDestination2(image: Image("RioDeJaneiro"), titreImage: "Rio De Janeiro")
+                        ExtDestination2(image: Image("MexicoPyramid"), titreImage: "Chichén Itzá, Mérida, Mexique")
+                        ExtDestination2(image: Image("RioDeJaneiro"), titreImage: "Rio De Janeiro, Brésil")
                         Spacer()
-                        ExtDestination2(image: Image("MadridView"), titreImage: "Calle Gran Vía, Madrid, Spain")
+                        ExtDestination2(image: Image("MadridView"), titreImage: "Calle Gran Vía, Madrid, Espagne")
                         Spacer()
-                        ExtDestination2(image: Image("TokyoView"), titreImage: "Tokyo")
+                        ExtDestination2(image: Image("TokyoView"), titreImage: "Tokyo, Japon")
                         Spacer()
-                        ExtDestination2(image: Image("BarceloneView"), titreImage: "Barcelone")
+                        ExtDestination2(image: Image("BarceloneView"), titreImage: "Barcelone, Espagne")
                     }
                 }
                 .navigationTitle("Destination")

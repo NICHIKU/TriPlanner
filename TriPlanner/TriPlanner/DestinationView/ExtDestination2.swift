@@ -12,6 +12,7 @@ struct ExtDestination2: View {
     var titreImage: String
     var body: some View {
         VStack{
+            Text("\(titreImage)")
             image
                 .resizable()
                 .cornerRadius(32)
