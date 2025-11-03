@@ -18,7 +18,7 @@ enum TypeTransport {
 
 struct Transport : Identifiable {
     var id: UUID = UUID()
-    var icon: Image
+    var icon: String
     var typeTransport: TypeTransport
 }
 

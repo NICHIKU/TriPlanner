@@ -8,3 +8,12 @@
 import Foundation
 
 let transporttest = Transport(icon: "iconDeMerde", typeTransport: .train)
+
+let emojisParType: [TypeTransport: String] = [
+    .voiture: "🚗",
+    .covoiturage: "🤝",
+    .avion: "✈️",
+    .train: "🚅",
+    .bus: "🚌",
+    .velo: "🚲"
+]
