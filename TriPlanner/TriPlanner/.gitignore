@@ -9,4 +9,7 @@ TriPlanner.xcodeproj/
 
 *.DS_Store
 
+.DS_Store
+
 *.xcuserstate
+

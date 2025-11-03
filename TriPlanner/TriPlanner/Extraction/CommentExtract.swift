@@ -7,12 +7,11 @@
 import SwiftUI
 
 struct CommentExtract: View {
-    @Binding var comments: [Comment]  // Utilisez @Binding pour modifier la liste depuis la vue parente
+    @Binding var comments: [Comment]
     @State private var userInput: String = ""
     
     var body: some View {
-        ZStack {
-            Color.blue
+        
             VStack{
                 Spacer()
                     .frame(height: 100)
@@ -30,15 +29,18 @@ struct CommentExtract: View {
                 .background(Color.white)
                 .cornerRadius(30)
                 
-                
-                HStack {
-                    VStack{
-                        Text("Comments")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding()
-                      
-                        VStack(alignment: .leading){
+                Spacer()
+                    .frame(height: 20)
+                ScrollView(.vertical, showsIndicators: false){
+                    
+                    HStack {
+                        VStack{
+                            Text("Comments")
+                                .font(.largeTitle)
+                                .bold()
+                                .padding()
+                            
+                            VStack(alignment: .leading){
                                 ForEach(comments) { comment in
                                     HStack{
                                         comment.userComment.profileImage
@@ -50,17 +52,16 @@ struct CommentExtract: View {
                                             .padding(.vertical, 15)
                                     }
                                 }
+                            }
+                                .frame(maxWidth: 250)
                         }
-                        .frame(maxWidth: 250, alignment: .leading)
-                        
                     }
                 }
-                .frame(width: 300)
+                .frame(maxWidth: 350,maxHeight: 150)
                 .background(Color.white)
                 .cornerRadius(30)
             }
         }
-    }
     
     private func addComment() {
         // Vérifier que le texte n'est pas vide
@@ -78,9 +79,9 @@ struct CommentExtract: View {
         userInput = ""
     }
 
-    
-    
 }
+
+ 
 
     
 
