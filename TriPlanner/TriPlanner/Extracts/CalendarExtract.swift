@@ -13,15 +13,26 @@ struct CalendarExtract: View {
     
     
     var body: some View {
-        Form {
-            DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
-                .datePickerStyle(.graphical)
-            DatePicker("Départ", selection: $selectedDate, displayedComponents: .hourAndMinute)
-            DatePicker("Retour", selection: $dateRetour)
+        VStack{
+            Form {
+                DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
+                    .datePickerStyle(.graphical)
+                DatePicker("Départ", selection: $selectedDate, displayedComponents: .hourAndMinute)
+                DatePicker("Retour", selection: $dateRetour)
+            }
         }
+        Button(action: {envoyerDate()}) {
+            Text("Envoyer")
+        }
+        .buttonStyle(BorderedProminentButtonStyle())
+
     }
 }
 
+
+func envoyerDate() {
+    print("Envoyer")
+}
 #Preview {
     CalendarExtract()
 }
