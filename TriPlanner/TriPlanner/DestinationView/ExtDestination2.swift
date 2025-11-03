@@ -2,7 +2,7 @@
 //  ExtDestination2.swift
 //  TriPlanner
 //
-//  Created by apprenant87 on 31/10/2025.
+//  Created by apprenant87 on 03/11/2025.
 //
 
 import SwiftUI
@@ -14,9 +14,10 @@ struct ExtDestination2: View {
         VStack{
             image
                 .resizable()
-                .cornerRadius(50)
+                .cornerRadius(32)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 200)
+                .frame(width: 375)
+                .padding(5)
         }
         
         
@@ -24,5 +25,5 @@ struct ExtDestination2: View {
     }
 
 #Preview {
-    ExtDestination2(image: Image("EiffelTower"), titreImage: "Stade de Mercedes-benz")
+    ExtDestination2(image: Image("MexicoPyramid"), titreImage: "Chichén Itzá, Mérida, Mexico")
 }

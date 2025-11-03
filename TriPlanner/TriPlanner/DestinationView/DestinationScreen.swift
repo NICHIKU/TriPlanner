@@ -21,69 +21,61 @@ struct DestinationScreen: View {
             return Cities.filter {$0.localizedCaseInsensitiveContains(searchText)}
         }
     }
-    
     var body: some View {
-        NavigationStack {
-            //                    Text("\(titreImage)")
-            //                        .font(.caption2)
-            //                    Image("MercoBenz")
-            //                        .resizable()
-            //                        .cornerRadius(24)
-            //                        .aspectRatio(contentMode: .fit)
-            //                        .frame(width: 125)
-            HStack{
-                Spacer()
-                ExtDestination(image: Image("Tokyo"), titreImage: "Stade Mercedes-Benz, Atlanta")
-                Spacer()
-                ExtDestination(image: Image("Manchester"), titreImage: "London Liverpool ST, Londres")
-                Spacer()
-                ExtDestination(image: Image("TourEiffel"), titreImage: "Tour eiffel, Paris")
-                Spacer()
-                ExtDestination(image: Image("Italia"), titreImage: "Salerno, Italia")
-                Spacer()
-            }
-            HStack{
-                
-                
-            }
-            VStack {
-                Picker("Bons plans et budget + élevé", selection: $selection) {
-                    ForEach(selections, id: \.self) { selection in
-                        Text(selection)
+            NavigationStack {
+                HStack{
+                    Spacer()
+                    ExtDestination(image: Image("Tokyo"), titreImage: "Stade Mercedes-Benz, Atlanta")
+                    Spacer()
+                    ExtDestination(image: Image("Manchester"), titreImage: "London Liverpool ST, Londres")
+                    Spacer()
+                    ExtDestination(image: Image("TourEiffel"), titreImage: "Tour eiffel, Paris")
+                    Spacer()
+                    ExtDestination(image: Image("Italia"), titreImage: "Salerno, Italia")
+                    Spacer()
+                }
+                HStack{
+                    
+                    
+                }
+                VStack {
+                    Picker("Bons plans et budget + élevé", selection: $selection) {
+                        ForEach(selections, id: \.self) { selection in
+                            Text(selection)
+                            
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding()
+                    
+                    // Contenu principal
+                    ZStack {
+                        if searchText.isEmpty {
+
+                        } else {
+                            // Afficher la liste des résultats filtrés
+                            List(filteredCity, id: \.self) { city in
+                                Text(city)
+                            }
+                            .listStyle(.plain)
+                        }
+                    }
+                    ScrollView(){
+                        ExtDestination2(image: Image("MexicoPyramid"), titreImage: "Chichén Itzá, Mérida, Mexico")
+                        ExtDestination2(image: Image("RioDeJaneiro"), titreImage: "Rio De Janeiro")
+                        Spacer()
+                        ExtDestination2(image: Image("MadridView"), titreImage: "Calle Gran Vía, Madrid, Spain")
+                        Spacer()
+                        ExtDestination2(image: Image("TokyoView"), titreImage: "Tokyo")
                     }
                 }
-                .pickerStyle(.segmented)
-                .padding()
-                
-                // Contenu principal
-                ZStack {
-                    if searchText.isEmpty {
-                        // Afficher seulement un écran vide ou un message
-                        VStack {
-                            Spacer()
-                            Text("Recherchez votre destination")
-                                .font(.title2)
-                                .foregroundColor(.gray)
-                                .font(.system(size: 50))
-                                .foregroundColor(.gray.opacity(0.5))
-                            Spacer()
-                        }
-                    } else {
-                        // Afficher la liste des résultats filtrés
-                        List(filteredCity, id: \.self) { city in
-                            Text(city)
-                        }
-                        .listStyle(.plain)
-                    }
-                }
+                .navigationTitle("Destination")
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Entrer votre destination")
             }
-            .navigationTitle("Destination")
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Entrer votre destination")
         }
     }
-}
-    
     
     #Preview {
         DestinationScreen()
     }
+
