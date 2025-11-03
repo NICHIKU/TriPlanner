@@ -23,17 +23,17 @@ struct DestinationScreen: View {
     }
     var body: some View {
             NavigationStack {
-                HStack{
-                    Spacer()
-                    ExtDestination(image: Image("Tokyo"), titreImage: "Stade Mercedes-Benz, Atlanta")
-                    Spacer()
-                    ExtDestination(image: Image("Manchester"), titreImage: "London Liverpool ST, Londres")
-                    Spacer()
-                    ExtDestination(image: Image("TourEiffel"), titreImage: "Tour eiffel, Paris")
-                    Spacer()
-                    ExtDestination(image: Image("Italia"), titreImage: "Salerno, Italia")
-                    Spacer()
-                }
+                    HStack{
+                        Spacer()
+                        ExtDestination(image: Image("Tokyo"), titreImage: "Stade Mercedes-Benz, Atlanta")
+                        Spacer()
+                        ExtDestination(image: Image("Manchester"), titreImage: "London Liverpool ST, Londres")
+                        Spacer()
+                        ExtDestination(image: Image("TourEiffel"), titreImage: "Tour eiffel, Paris")
+                        Spacer()
+                        ExtDestination(image: Image("China"), titreImage: "Chine")
+                        Spacer()
+                    }
                 HStack{
                     
                     
